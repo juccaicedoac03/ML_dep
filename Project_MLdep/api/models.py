@@ -1,6 +1,6 @@
 from django.db import models
 
-class orders(models.Model):
+class order(models.Model):
     order_id = models.BigIntegerField(primary_key=True)
     store_id = models.BigIntegerField()
     to_user_distance = models.FloatField(max_length=200)
