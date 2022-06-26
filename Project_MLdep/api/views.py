@@ -11,11 +11,11 @@ from rest_framework import status, generics
 from .models import order
 import json
 
-class OrderView(View):
+class OrderView(APIView):
     
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
+    #@method_decorator(csrf_exempt)
+    #def dispatch(self, request, *args, **kwargs):
+    #    return super().dispatch(request, *args, **kwargs)
 
     def get(self, request, order_id=0):
         if order_id > 0:
