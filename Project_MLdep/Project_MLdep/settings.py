@@ -81,7 +81,7 @@ DATABASES = {
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'AdminSQL',
-        'NAME': 'DB_MLdep',
+        'NAME': 'MLdep',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
