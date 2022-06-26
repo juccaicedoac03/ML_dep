@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+class orders(models.Model):
+    order_id = models.BigIntegerField(primary_key=True,max_length=10)
+    store_id = models.BigIntegerField(max_length=10)
+    to_user_distance = models.FloatField(max_digits=10,decimal_places=10)
+    to_user_elevation = models.FloatField(max_digits=10,decimal_places=10)
+    total_earning = models.BigIntegerField(max_length=10)
+    created_at = models.TextField(max_length=25)
+    taken = models.BooleanField()
