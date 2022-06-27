@@ -84,10 +84,10 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'AdminPostgres',
         'NAME': 'MLdep',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #'OPTIONS': {
+        #    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             #'auth_plugin': 'mysql_native_password'
-        }
+        #}
     }
 }
 
