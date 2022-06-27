@@ -7,4 +7,5 @@ class ApiConfig(AppConfig):
     name = 'api'
 
 class RandomForestClassifier(AppConfig):
-    mdl = pickle.load(open('../Models/RF_model.pkl', 'rb'))
+    #mdl = pickle.load(open('ML_dep/Models/RF_model.pkl', 'rb'))
+    pass

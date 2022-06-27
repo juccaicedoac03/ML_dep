@@ -32,13 +32,13 @@ class OrderView(APIView):
         feat_names = col_names[1::]
         prep = timeConverter(feat_names=feat_names)
         X = prep.fit_transform(df)
-        y_pred = RandomForestClassifier.mdl.predict(X)
+        #y_pred = RandomForestClassifier.mdl.predict(X)
 
-        for i, row in df.iterrows():
-            if len(list(order.objects.filter(order_id=row['order_id']).values()))==0:
-                order.objects.create(order_id=row['order_id'],store_id=row['store_id'],
-                to_user_distance=row['to_user_distance'],to_user_elevation=row['to_user_elevation'],
-                total_earning=row['total_earning'],created_at=row['created_at'],taken=y_pred[i])
+        #for i, row in df.iterrows():
+        #    if len(list(order.objects.filter(order_id=row['order_id']).values()))==0:
+        #        order.objects.create(order_id=row['order_id'],store_id=row['store_id'],
+        #        to_user_distance=row['to_user_distance'],to_user_elevation=row['to_user_elevation'],
+        #        total_earning=row['total_earning'],created_at=row['created_at'],taken=y_pred[i])
         data = {'message': 'Success'}
         return JsonResponse(data)
         
