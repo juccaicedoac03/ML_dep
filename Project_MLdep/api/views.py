@@ -7,6 +7,7 @@ from rest_framework import status, generics
 from .models import order
 import json
 import pandas as pd
+from ML_dep.Utils import timeConverter
 
 
 class OrderView(APIView):
@@ -33,7 +34,13 @@ class OrderView(APIView):
     def post(self, request):
         jd = json.loads(request.body)
         df = pd.json_normalize(jd['orders'])
-        print(df)
+        #print(df)
+        col_names = list(df.keys())
+        feat_names = col_names[1::]
+        prep = timeConverter(feat_names=feat_names)
+        X = prep.fit_transform(df)
+        print(X)
+
         #for i in jd['orders']:
         #    if len(list(order.objects.filter(order_id=i['order_id']).values()))==0:
         #        order.objects.create(order_id=i['order_id'],store_id=i['store_id'],
