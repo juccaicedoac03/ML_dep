@@ -1,10 +1,6 @@
 from unicodedata import name
-from django import dispatch
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.views import View
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status, generics
