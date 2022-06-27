@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from tkinter.tix import Tree
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1blz7$youg7l!rvy7x8bg458kjty=b=s@$n%$icctue3=c$@r@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -78,8 +79,8 @@ WSGI_APPLICATION = 'Project_MLdep.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': 'db',
+        'PORT': '3307',
         'USER': 'root',
         'PASSWORD': 'AdminSQL',
         'NAME': 'MLdep',
