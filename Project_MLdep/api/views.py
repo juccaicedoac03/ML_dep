@@ -33,15 +33,16 @@ class OrderView(APIView):
         return JsonResponse(data)
 
     def post(self, request):
-        #print(request.body)
+        print(request.body)
         jd = json.loads(request.body)
         print(jd)
-        
-        order.objects.create(order_id=jd['order_id'],store_id=jd['store_id'],
-        to_user_distance=jd['to_user_distance'],to_user_elevation=jd['to_user_elevation'],
-        total_earning=jd['total_earning'],created_at=jd['created_at'],taken=jd['taken'])
+        for i in jd['orders']:
+            order.objects.create(order_id=i['order_id'],store_id=i['store_id'],
+            to_user_distance=i['to_user_distance'],to_user_elevation=i['to_user_elevation'],
+            total_earning=i['total_earning'],created_at=i['created_at'],taken=i['taken'])
         data = {'message': 'Success'}
         return JsonResponse(data)
+        
 
     def put(self, request, order_id):
         jd = json.loads(request.body)
