@@ -1,9 +1,5 @@
-from unicodedata import name
 from django.http import JsonResponse
-from django.shortcuts import render
-from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status, generics
 from .models import order
 import json
 import pandas as pd
