@@ -11,7 +11,7 @@ __pycache__/
 **/*.pkl
 
 # Ignore DS
-.DS_Store
+*.DS_Store
 
 # Ignore docker files
 docker/docker
