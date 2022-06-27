@@ -10,6 +10,12 @@ __pycache__/
 *.pkl
 **/*.pkl
 
+# Ignore docker files
+docker/docker
+docker/Dockerfile
+**/Dockerfile
+**/*.yml
+
 # Distribution / packaging
 .Python
 build/
