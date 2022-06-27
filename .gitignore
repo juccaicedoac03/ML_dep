@@ -10,6 +10,9 @@ __pycache__/
 *.pkl
 **/*.pkl
 
+# Ignore DS
+.DS_Store
+
 # Ignore docker files
 docker/docker
 docker/Dockerfile
