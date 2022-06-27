@@ -15,9 +15,13 @@ __pycache__/
 
 # Ignore docker files
 docker/docker
+MLdel_docker/docker
+MLdel_docker/*
 docker/Dockerfile
 **/Dockerfile
 **/*.yml
+db*
+
 
 # Distribution / packaging
 .Python
