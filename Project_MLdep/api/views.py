@@ -4,7 +4,7 @@ from .models import order
 import json
 import pandas as pd
 from ML_dep.Utils import timeConverter
-from .apps import RandomForestClassifier
+#from .apps import RandomForestClassifier
 
 
 class OrderView(APIView):

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from tkinter.tix import Tree
+#from tkinter.tix import Tree
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,14 +78,15 @@ WSGI_APPLICATION = 'Project_MLdep.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'db',
-        'PORT': '3307',
+        'PORT': '5432',
         'USER': 'root',
-        'PASSWORD': 'AdminSQL',
+        'PASSWORD': 'AdminPostgres',
         'NAME': 'MLdep',
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            #'auth_plugin': 'mysql_native_password'
         }
     }
 }
