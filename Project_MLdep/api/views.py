@@ -6,6 +6,8 @@ from rest_framework.views import APIView
 from rest_framework import status, generics
 from .models import order
 import json
+import pandas as pd
+
 
 class OrderView(APIView):
     
@@ -30,11 +32,13 @@ class OrderView(APIView):
 
     def post(self, request):
         jd = json.loads(request.body)
-        for i in jd['orders']:
-            if len(list(order.objects.filter(order_id=i['order_id']).values()))==0:
-                order.objects.create(order_id=i['order_id'],store_id=i['store_id'],
-                to_user_distance=i['to_user_distance'],to_user_elevation=i['to_user_elevation'],
-                total_earning=i['total_earning'],created_at=i['created_at'],taken=i['taken'])
+        df = pd.json_normalize(jd['orders'])
+        print(df)
+        #for i in jd['orders']:
+        #    if len(list(order.objects.filter(order_id=i['order_id']).values()))==0:
+        #        order.objects.create(order_id=i['order_id'],store_id=i['store_id'],
+        #        to_user_distance=i['to_user_distance'],to_user_elevation=i['to_user_elevation'],
+        #        total_earning=i['total_earning'],created_at=i['created_at'],taken=i['taken'])
         data = {'message': 'Success'}
         return JsonResponse(data)
         
