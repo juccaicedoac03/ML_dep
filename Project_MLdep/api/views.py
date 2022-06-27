@@ -12,10 +12,6 @@ from .apps import RandomForestClassifier
 
 
 class OrderView(APIView):
-    
-    #@method_decorator(csrf_exempt)
-    #def dispatch(self, request, *args, **kwargs):
-    #    return super().dispatch(request, *args, **kwargs)
 
     def get(self, request, order_id=0):
         if order_id > 0:
@@ -35,7 +31,7 @@ class OrderView(APIView):
     def post(self, request):
         jd = json.loads(request.body)
         df = pd.json_normalize(jd['orders'])
-        
+
         col_names = list(df.keys())
         feat_names = col_names[1::]
         prep = timeConverter(feat_names=feat_names)
