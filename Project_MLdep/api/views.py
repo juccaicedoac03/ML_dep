@@ -8,6 +8,7 @@ from .models import order
 import json
 import pandas as pd
 from ML_dep.Utils import timeConverter
+from .apps import RandomForestClassifier
 
 
 class OrderView(APIView):
@@ -39,7 +40,8 @@ class OrderView(APIView):
         feat_names = col_names[1::]
         prep = timeConverter(feat_names=feat_names)
         X = prep.fit_transform(df)
-        print(X)
+        y_pred = RandomForestClassifier.mdl.predict(X)
+        print(X,y_pred)
 
         #for i in jd['orders']:
         #    if len(list(order.objects.filter(order_id=i['order_id']).values()))==0:
