@@ -8,7 +8,6 @@ djangorestframework==3.13.1
 filelock==3.7.1
 gdown==4.5.1
 idna==3.3
-joblib==1.1.0
 ML-dep==0.1
 mysqlclient==2.1.1
 numpy==1.23.0
