@@ -6,6 +6,5 @@ class ApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'api'
 
-#class RandomForestClassifier(AppConfig):
-    #mdl = pickle.load(open('ML_dep/Models/RF_model.pkl', 'rb'))
-#    pass
+class RandomForestClassifier(AppConfig):
+    mdl = pickle.load(open('RF_model.pkl', 'rb'))
