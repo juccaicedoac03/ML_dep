@@ -1,5 +1,6 @@
 # ML_dep 
-A Python 3 deployed machine learning REST API, using Django and Docker.
+A deployed machine learning REST API using Django and Docker.
+Python 3
 
 ## For development
 
