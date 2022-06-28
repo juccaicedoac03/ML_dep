@@ -79,15 +79,11 @@ WSGI_APPLICATION = 'Project_MLdep.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'db',
-        'PORT': '5432',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'NAME': 'postgres',
-        #'OPTIONS': {
-        #    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            #'auth_plugin': 'mysql_native_password'
-        #}
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
