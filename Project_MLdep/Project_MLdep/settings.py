@@ -81,9 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'db',
         'PORT': '5432',
-        'USER': 'root',
-        'PASSWORD': 'AdminPostgres',
-        'NAME': 'MLdep',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'NAME': 'postgres',
         #'OPTIONS': {
         #    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             #'auth_plugin': 'mysql_native_password'
