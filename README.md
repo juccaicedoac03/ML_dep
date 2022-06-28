@@ -93,6 +93,7 @@ docker-compose up
 # REST API
 
 The ML REST API methods are described below.
+
 HOST: http://0.0.0.0:8000/
 
 ## List of items
