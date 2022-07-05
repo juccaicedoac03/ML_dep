@@ -194,7 +194,7 @@ HOST: http://0.0.0.0:8000/
 /api/Orders/
 ```
 
-### Request Body: one by one or in bathc
+### Request Body: one by one or in batch
 
 ```
 {
@@ -205,8 +205,7 @@ HOST: http://0.0.0.0:8000/
       "to_user_distance": 1.298663,
       "to_user_elevation": -19.70105,
       "total_earning": 5500,
-      "created_at": "2017-09-19T15:36:49Z",
-      "taken": false
+      "created_at": "2017-09-19T15:36:49Z"
     },
     {
       "order_id": 15213594,
@@ -214,8 +213,7 @@ HOST: http://0.0.0.0:8000/
       "to_user_distance": 0.750715,
       "to_user_elevation": -34.016602,
       "total_earning": 5700,
-      "created_at": "2017-09-22T21:38:58Z",
-      "taken": true
+      "created_at": "2017-09-22T21:38:58Z"
     }
   ]
 }
